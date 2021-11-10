@@ -20,7 +20,7 @@
 
   export let project: string;
 
-  let totalArea = 1000;
+  let totalArea = 0;
 
   let kasetsuLevelChoice: number;
   let kasetsuAreaChoice: number;
