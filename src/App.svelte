@@ -222,7 +222,7 @@
 <style>
   main {
     text-align: left;
-    padding: 15.5em 1em 10em;
+    padding: 13.5em 1em 10em;
     width: 60%;
     max-width: 240px;
     margin: 0 auto;
@@ -232,6 +232,11 @@
     color: #20df6a;
     font-size: 2em;
     font-weight: 100;
+    margin: 0.75em 0 0;
+  }
+
+  h2 {
+    margin: 0.3em 0 0;
   }
 
   input[type="number"] {
@@ -283,8 +288,8 @@
     position: fixed;
     background: white;
     border-bottom: #20df6a dotted 1px;
-    padding-bottom: 0.85em;
-    height: 14em;
+    padding: 0.5em 0 0.75em;
+    height: 12em;
   }
 
   @media (min-width: 640px) {
