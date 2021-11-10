@@ -64,18 +64,20 @@
 </script>
 
 <main>
-  <h1>概算見積</h1>
-  <h2>{project}</h2>
+  <div class="fixed">
+    <h1>概算見積</h1>
+    <h2>{project}</h2>
 
-  <div class="container price">
-    <h3>概算計: {Math.ceil(totalPrice).toLocaleString()}円</h3>
-    <label for="total-area" class="value">
-      @ <input
-        type="number"
-        name="total-area"
-        bind:value={totalArea}
-      />㎡</label
-    >
+    <div class="container price">
+      <h3>概算計: {Math.ceil(totalPrice).toLocaleString()}円</h3>
+      <label for="total-area" class="value">
+        @ <input
+          type="number"
+          name="total-area"
+          bind:value={totalArea}
+        />㎡</label
+      >
+    </div>
   </div>
 
   <Section title="直接仮設" price={kasetsuPrice} />
@@ -220,7 +222,7 @@
 <style>
   main {
     text-align: left;
-    padding: 2em 1em 10em;
+    padding: 15.5em 1em 10em;
     width: 60%;
     max-width: 240px;
     margin: 0 auto;
@@ -272,6 +274,17 @@
   .value {
     text-align: right;
     margin: 0 0 20px;
+  }
+
+  .fixed {
+    z-index: 10;
+    width: 60%;
+    top: 0;
+    position: fixed;
+    background: white;
+    border-bottom: #20df6a dotted 1px;
+    padding-bottom: 0.85em;
+    height: 14em;
   }
 
   @media (min-width: 640px) {
