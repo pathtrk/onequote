@@ -21,10 +21,11 @@
   export let project: string;
 
   let totalArea = 1000;
-  let levelChoice: number;
 
+  let kasetsuLevelChoice: number;
   let kasetsuAreaChoice: number;
   let bodyStructChoice: number = 0;
+  let bodyLevelChoice: number;
   let bodyUndergroundChoice: number = 0;
   let bodyAreaChoice: number;
   let bodyRatioChoice: number;
@@ -41,11 +42,11 @@
 
   $: kasetsuPrice =
     Object.values(kasetsu)[kasetsuAreaChoice] *
-    Object.values(kasetsuLevels)[levelChoice];
+    Object.values(kasetsuLevels)[kasetsuLevelChoice];
 
   $: bodyPrice =
     Object.values(bodyArea)[bodyAreaChoice] *
-    Object.values(bodyLevels)[levelChoice] *
+    Object.values(bodyLevels)[bodyLevelChoice] *
     Object.values(bodyRatio)[bodyRatioChoice] *
     Object.values(bodyStruct)[bodyStructChoice] *
     Object.values(bodyUnderground)[bodyUndergroundChoice];
@@ -87,8 +88,8 @@
 
   <div class="slider-container">
     <p class="key">地上+地下階数</p>
-    <p class="value">x {Object.values(kasetsuLevels)[levelChoice]}</p>
-    <Slider data={kasetsuLevels} bind:choice={levelChoice} />
+    <p class="value">x {Object.values(kasetsuLevels)[kasetsuLevelChoice]}</p>
+    <Slider data={kasetsuLevels} bind:choice={kasetsuLevelChoice} />
   </div>
 
   <Section title="躯体構造" price={bodyPrice} />
@@ -133,8 +134,8 @@
 
   <div class="slider-container">
     <p class="key">地上+地下階数</p>
-    <p class="value">x {Object.values(bodyLevels)[levelChoice]}</p>
-    <Slider data={bodyLevels} bind:choice={levelChoice} />
+    <p class="value">x {Object.values(bodyLevels)[bodyLevelChoice]}</p>
+    <Slider data={bodyLevels} bind:choice={bodyLevelChoice} />
   </div>
 
   <div class="slider-container">
