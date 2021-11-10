@@ -67,7 +67,7 @@
   <h1>概算見積</h1>
   <h2>{project}</h2>
 
-  <div class="container">
+  <div class="container price">
     <h3>概算計: {Math.ceil(totalPrice).toLocaleString()}円</h3>
     <label for="total-area" class="value">
       @ <input
@@ -241,7 +241,11 @@
     margin: 5px auto;
     align-items: baseline;
     display: flex;
-    width: 80%;
+    width: 85%;
+  }
+
+  .container.price {
+    width: 100%;
   }
 
   .container .key {
@@ -256,7 +260,7 @@
 
   .slider-container {
     margin: 0 auto;
-    width: 80%;
+    width: 85%;
     height: 10em;
     --range-handle-focus: #404ad4; /* focussed handle color */
   }
